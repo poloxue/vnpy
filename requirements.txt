@@ -1,7 +1,4 @@
 tzlocal==5.2
-PySide6==6.3.0
-pyqtgraph==0.13.4
-qdarkstyle==3.2.3
 numpy==1.26.4
 pandas==2.2.1
 matplotlib==3.8.3
