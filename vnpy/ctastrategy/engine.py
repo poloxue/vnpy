@@ -824,7 +824,8 @@ class CtaEngine(BaseEngine):
         # Remove from symbol strategy map
         strategies: list = self.symbol_strategy_map[strategy.vt_symbol]
         strategies.remove(strategy)
-        del self.strategy_logs[strategy.strategy_name]
+        if strategy.strategy_name in self.strategy_logs:
+            del self.strategy_logs[strategy.strategy_name]
 
         # Remove from active orderid map
         if strategy_name in self.strategy_orderid_map:
